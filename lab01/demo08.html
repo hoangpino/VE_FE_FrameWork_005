@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/schools.png"/>
+    <title>demo 08</title>
+</head>
+<body>
+    <h1>Demo Calculate</h1>
+    <label>so A</label>
+    <input id="mun1" type="number"/>
+    <label>so B</label>
+    <input id="mun2" type="number"/><br>
+    <button id="cong" type="button">phep cong</button>
+    <div id="result1"></div>
+    <button id="tru" type="button">phep tru</button>
+    <div id="result2"></div>
+    <button id="nhan" type="button">phep nhan</button>
+    <div id="result3"></div>
+    <button id="chia" type="button">phep chia</button>
+    <div id="result4"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#cong").click(function(){
+                let value = parseInt($("#mun1").val());
+                let value2 =parseInt($("#mun2").val());
+                $("#result1").text(value+value2);
+            })
+            $("#tru").click(function(){
+                let value = $("#mun1").val();
+                let value2 = $("#mun2").val();
+                $("#result2").text(value-value2);
+            })
+            $("#nhan").click(function(){
+                let value = $("#mun1").val();
+                let value2 = $("#mun2").val();
+                $("#result3").text(value*value2);
+            })
+            $("#chia").click(function(){
+                let value = parseInt($("#mun1").val());
+                let value2 = parseInt($("#mun2").val());
+                if(value2==0) {
+                    $("#result4").text("loi chia cho zero");
+                }else {
+                    $("#result4").text(value/value2);
+                }
+            })
+        });
+    </script>
+</body>
+</html>
