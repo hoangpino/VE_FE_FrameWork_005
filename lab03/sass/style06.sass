@@ -1,0 +1,54 @@
+@use 'dark' as theme
+
+//operator
+
+%set-size
+    padding: 10px 20px
+    margin: 5px 
+
+%set-content-color
+    background-color: theme.$color-blue
+    color: theme.$color-white
+
+%set-body-color
+    background-color: theme.$body-color
+    color: theme.$font-color
+
+body
+    @extend %set-body-color
+
+h1
+    color: theme.$color-red
+
+div
+    @extend %set-content-color
+    margin: 5px
+
+nav
+    div
+        @extend %set-body-color
+        
+    
+    ul
+        list-style: none
+        overflow: hidden
+
+        li
+            @extend %set-content-color
+            @extend %set-size
+            float: left
+            @if ((100 /3) * 1% > 33%)
+                width: 10%
+            @else 
+                width: 30%
+                color: theme.$color-red
+            
+
+    a
+        text-decoration: none
+        color: theme.$color-white
+        background-color: theme.$color-red
+        display: block
+        width: 100%
+        @extend %set-size
+        

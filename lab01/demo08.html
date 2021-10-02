@@ -14,13 +14,10 @@
     <label>so B</label>
     <input id="mun2" type="number"/><br>
     <button id="cong" type="button">phep cong</button>
-    <div id="result1"></div>
     <button id="tru" type="button">phep tru</button>
-    <div id="result2"></div>
     <button id="nhan" type="button">phep nhan</button>
-    <div id="result3"></div>
     <button id="chia" type="button">phep chia</button>
-    <div id="result4"></div>
+    <div id="result"></div>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -29,25 +26,25 @@
             $("#cong").click(function(){
                 let value = parseInt($("#mun1").val());
                 let value2 =parseInt($("#mun2").val());
-                $("#result1").text(value+value2);
+                $("#result").text(value+value2);
             })
             $("#tru").click(function(){
                 let value = $("#mun1").val();
                 let value2 = $("#mun2").val();
-                $("#result2").text(value-value2);
+                $("#result").text(value-value2);
             })
             $("#nhan").click(function(){
                 let value = $("#mun1").val();
                 let value2 = $("#mun2").val();
-                $("#result3").text(value*value2);
+                $("#result").text(value*value2);
             })
             $("#chia").click(function(){
                 let value = parseInt($("#mun1").val());
                 let value2 = parseInt($("#mun2").val());
                 if(value2==0) {
-                    $("#result4").text("loi chia cho zero");
+                    $("#result").text("loi chia cho zero");
                 }else {
-                    $("#result4").text(value/value2);
+                    $("#result").text(value/value2);
                 }
             })
         });
