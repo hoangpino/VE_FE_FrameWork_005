@@ -226,5 +226,5 @@ p {
 .footer-icon {
     display: inline-block;
     font-size: 6rem;
-    color: var(--color-green);
+    margin: 2rem;
 }

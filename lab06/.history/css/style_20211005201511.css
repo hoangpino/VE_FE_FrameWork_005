@@ -222,9 +222,3 @@ p {
 #footer {
     min-height: 50vh;
 }
-
-.footer-icon {
-    display: inline-block;
-    font-size: 6rem;
-    color: var(--color-green);
-}
